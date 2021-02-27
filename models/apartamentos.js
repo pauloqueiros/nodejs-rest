@@ -1,14 +1,14 @@
 const conexao = require('../infra/conexao')
 
 class Apartamentos {
-    adiciona(apartamento){
+    adiciona(apartamento, res){
         const sql = 'INSERT INTO apartamentos SET ?'
 
         conexao.query(sql, apartamento, (erro, result) => {
             if(erro){
-                console.log(erro);
+                res.status(400).json(erro);
             }else{
-                console.log(result);
+               res.status(201).json(result);
             }
         });
     }
