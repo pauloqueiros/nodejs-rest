@@ -3,6 +3,7 @@ const Apartamentos = require('../models/apartamentos');
 module.exports = app => {
 
     app.get('/apartamentos', (req, res) => {
+        res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8000');
         Apartamentos.lista(res);
     });
 
