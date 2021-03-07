@@ -3,6 +3,13 @@ class Tabelas {
         this.conexao = conexao;
 
         this.criarApartamentos();
+        this.criarSindicos();
+        this.criarComunicados();
+        this.criarLocal();
+        this.criarMoradores();
+        this.criarReserva();
+        this.criarCorrespondencia();
+        this.criarOcorrencias();
     }
 
     criarApartamentos() {
